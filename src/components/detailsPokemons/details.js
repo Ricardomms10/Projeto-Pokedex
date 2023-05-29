@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { getPokemonData } from "../searchPokemon/searchPokemon";
-import { CardImage, BtnX, CardContainer, BtnTypes,ContainerBtn, SelectBtn, ListDetalis, Detalis } from "./style";
+import { CardImage, BtnX, CardContainer, BtnTypes, ContainerBtn, SelectBtn,  ListDetalis, Detalis, Icons, ContainerIcons } from "../detailsPokemons/style";
+import { typeIcons } from "../../theme/typesImagens";
+
 
 export const PokemonDetails = () => {
 
@@ -17,7 +19,7 @@ export const PokemonDetails = () => {
 
         const fetchData = async () => {
             const pokemonsData = await getPokemonData(pokemonDetailsUrl)
-            
+
             if (pokemonsData.sprites.versions['generation-v']['black-white'].animated.front_default !== null) {
                 setPokemon({
                     name: pokemonsData.name,
@@ -64,7 +66,7 @@ export const PokemonDetails = () => {
         const abilitiesNameList = pokemonsData.abilities.map(item => item.ability.name)
 
         const abilitiesList = await Promise.all(abilitiesNameList.map(ability => {
-            
+
 
             const getAbilityDetails = async () => {
                 const abilityData = await getPokemonData(`https://pokeapi.co/api/v2/ability/${ability}`)
@@ -89,19 +91,19 @@ export const PokemonDetails = () => {
                 pokemon !== undefined ?
                     <>
                         <BtnX href="/"> X </BtnX>
-                              
-                         <div>
-                         <h2>
-                         {pokemon.types[1]}
-                         </h2>
 
-                         <h2>
-                        {pokemon.types[0]}
-                         </h2>
+                        <ContainerIcons pokemon={pokemon}>
+                            {
+                                pokemon.types.length === 2 ?
+                                    <>
+                                        <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[0]]} title= {`Pokemon Tipo ${pokemon.types[0]}`} />
+                                        <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[1]]} title= {`Pokemon Tipo ${pokemon.types[1]}`}/>
+                                    </>
+                                    : <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[0]]} title= {`Pokemon Tipo ${pokemon.types[0]}`}/>
+                            }
+                        </ContainerIcons>
 
-                        </div> 
-
-                        <CardImage>
+                        <CardImage pokemon={pokemon}>
                             <img src={pokemon.image} alt={`imagem do ${pokemon.name}`} />
                             <h1>{pokemon.name}</h1>
                         </CardImage>
@@ -136,7 +138,7 @@ export const PokemonDetails = () => {
                                             })
                                         }
                                     </>
-                                    : <SelectBtn> Selecione no Botão acima </SelectBtn>
+                                    : <SelectBtn> Selecione um botão acima </SelectBtn>
                             }
                         </ListDetalis>
 

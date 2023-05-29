@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { typeColors } from "../../theme/typeColors";
 
 export const Card = styled.li`
-background-image: linear-gradient(to bottom, #FF0000, #FF0000),
+  background-image: linear-gradient(to bottom, #FF0000, #FF0000),
   linear-gradient(to bottom, #FFF, #FFF);
   background-size: 100% 50%;
   background-repeat: no-repeat;
@@ -16,25 +16,25 @@ background-image: linear-gradient(to bottom, #FF0000, #FF0000),
   width: 190px;
   height: 250px;
   flex: 1;
+  position:relative;
 `
-  
 
 export const PokeImgContainer = styled.div`
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  flex-direction:row;
-  width:125px;
+  height:120px;
+  width:120px;
   background-color: ${props => typeColors[props.pokemon.types[0].type.name]};
   border: 3px solid #000;
+  position:relative;
+  top:15px;
 `;
 
 export const PokeImage = styled.img`
   height: 120px;
   width: 150px;
-  
 `;
 
 export const CardTop = styled.div`
@@ -46,9 +46,13 @@ export const CardTop = styled.div`
 `;
 
 export const NamePokemon = styled.h3`
-  text-transform: capitalize;
   font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   color: #000;
+  margin-top:10px;
 `;
 
 export const ContainerId = styled.div`
@@ -59,7 +63,6 @@ export const ContainerId = styled.div`
 
 export const IdPokemon = styled.p`
   display: block;
-  text-transform: capitalize;
   font-size: 15px;
   font-weight: bold;
   color: #fff;
@@ -67,6 +70,8 @@ export const IdPokemon = styled.p`
   align-items: flex-start;
   align-self: flex-start;
   margin: 3px;
+  position: absolute;
+  top:1px;
 `;
 
 export const ImgGif = styled.img`
@@ -74,5 +79,7 @@ export const ImgGif = styled.img`
   justify-content: flex-end;
   align-items: flex-end;
   align-self: flex-end;
-  padding: 0px 6px 10px 0px;
+  position:relative;
+  top:5px;
+  padding-right: 5px;
 `;

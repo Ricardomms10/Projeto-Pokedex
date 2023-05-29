@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";  
 
-import { Home } from "../home";
-import { Details } from "../details/index";
+import { Home } from "../components/home";
+import { Details } from "../components/detailsPokemons/index";
 
 export const AppRoutes = () => (
 

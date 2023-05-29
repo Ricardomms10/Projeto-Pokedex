@@ -11,30 +11,26 @@ export const ButtonHeader = styled.button`
    background-color:#FFA12B;
    display:block;
    position:relative;
-   padding:5px 10px;
-   
+   padding:5px 15px;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
    text-shadow: 0px 1px 0px #000;
    filter: dropshadow(color=#000, offx=0px, offy=1px);
-   
    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-   
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
    border-radius: 5px;
+   transition: background-color 0.3s ease;
+   cursor: pointer;
  }
- 
  &:active{
    top:10px;
    background-color:#F78900;
-   
    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
  }
- 
  &:after{
    content:"";
    height:100%;
@@ -49,15 +45,13 @@ export const ButtonHeader = styled.button`
    -moz-border-radius: 5px;
    border-radius: 5px;
  }
-   
 `
+
 //Button (Mais Pokemons)
 
 export const ContainerButton = styled.div`
-  display:flex;
-  justify-content:center;
-  margin: 6px 5px 0px 5px;
-  padding: 0px 5px 5px 5px ;
+  margin: 6px 5px 10px 5px;
+  padding: 5px;
 `
 
 export const BtnMaisPokemon = styled.button`
@@ -66,7 +60,7 @@ export const BtnMaisPokemon = styled.button`
     webkit-transition-duration: 0.2s; 
     transition-duration: 0.4s;
     cursor: pointer;
-    border: solid 3px #0e62b0;
+    border: solid 5px #0e62b0;
     border-radius: 5px ;
     height: 40px;
     font-family: 'Josefin Sans', sans-serif;
@@ -76,12 +70,11 @@ export const BtnMaisPokemon = styled.button`
     color: #0e62b0;
     background-color: #f5ef47;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-
     &:hover {
     transition-duration: 0.2s;
     color: #000;
-    background-color:rgba(245, 239, 71, 0.6);   
   }
-   
-
+   &:active{
+    background-color:rgba(245, 239, 71, 0.6)
+   }
 `

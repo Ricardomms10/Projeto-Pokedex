@@ -1,14 +1,16 @@
 import { ButtonToggler } from "../button/button-off";
 import { Logo } from "./logo";
-import { Header} from "./style";
+import { Header } from "./style";
 
 
 
- const Menu = () => (
+const Menu = () => (
     <Header>
-        <Logo/>
-        <ButtonToggler/> 
+        <a href="/">
+            <Logo />
+        </a>
+        <ButtonToggler />
     </Header>
 )
 
-export {Menu}
+export { Menu }

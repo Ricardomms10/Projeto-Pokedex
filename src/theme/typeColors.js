@@ -1,5 +1,4 @@
 export const typeColors = {
-  
     normal: "#919AA2",
     grass: "#63BC5A",
     fire: "#FF9D55",
@@ -20,5 +19,4 @@ export const typeColors = {
     fairy: "#AC52ACde",
     dragon: "#257167",
     unknown: "#ffffff"
-    
 }

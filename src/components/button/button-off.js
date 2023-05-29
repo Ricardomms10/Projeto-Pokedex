@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 
+import { themes, ThemeContext } from "../../context/themeContext"
 import { ButtonHeader } from "./style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export const ButtonToggler = () => {
 
+  const { theme, toggleTheme } = useContext(ThemeContext)
 
   return (
     <div>
-      <ButtonHeader><i className="fa-sharp fa-solid fa-lightbulb"></i></ButtonHeader>
+      <ButtonHeader onClick={toggleTheme} checked={theme === themes.ligth}>
+        {theme === themes.ligth ? (
+          <FontAwesomeIcon icon={faSun} />
+        ) : (
+          <FontAwesomeIcon icon={faMoon} />
+        )}
+      </ButtonHeader>
     </div>
-  )
-}
+  );
+};
 
 

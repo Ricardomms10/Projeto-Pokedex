@@ -6,7 +6,7 @@ export const Header = styled.header`
    justify-content: space-between;
    align-items: center;
    padding: 10px 25px 10px 20px;
-   background-color:;
+   
 `
 
 export const ImgLogo = styled.img`

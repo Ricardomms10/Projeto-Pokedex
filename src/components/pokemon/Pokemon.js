@@ -15,12 +15,10 @@ const Pokemon = (props) => {
                 <PokeImage pokemon={pokemon} alt={pokemon.name} src={pokemon.sprites.other.dream_world.front_default} />
                 </PokeImgContainer>
 
-              
                     <CardTop>
                         <NamePokemon>{pokemon.name}</NamePokemon>
                     </CardTop>
                
-
                 <ImgGif alt={pokemon.name} src={pokemon?.sprites?.versions?.["generation-v"]?.["black-white"]
                     ?.animated?.front_default} />
 

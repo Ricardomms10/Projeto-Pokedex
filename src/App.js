@@ -1,15 +1,18 @@
 import { GlobalStyles } from "./theme/GlobalStyled";
 
 import React from "react";
-import { AppRoutes } from "./components/contain/routes";
+import { AppRoutes } from "./contain/routes";
+import { BackgroundProvider } from "./context/themeContext";
+
 
 export const App = () => {
 
   return (
-    <>
-      <GlobalStyles/>
+    <BackgroundProvider>
+      <GlobalStyles />
       <AppRoutes />
-    </>
+    </BackgroundProvider>
+
   );
 }
 
