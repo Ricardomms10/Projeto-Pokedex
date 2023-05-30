@@ -43,10 +43,6 @@ Bem-vindo ao projeto Pokedex! Esta é uma aplicação web que permite pesquisar 
 
 ## ⚡️ Como rodar o esse projeto?
 
-[![Executar o Projeto](https://img.shields.io/badge/Executar%20o%20Projeto-Click%20Aqui-blue)](./start-pokedex)
-
-ou 
-
 ```
 No diretório do projeto, você pode executar:
 
