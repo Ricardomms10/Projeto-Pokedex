@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
-import dayColor from "../components/image/fundoDia.jpg"
-import nigthColor from "../components/image/night-background.jpg"
+import dayColor from "../components/assets/image/fundoDia.jpg"
+import nigthColor from "../components/assets/image/night-background.jpg"
 
 export const themes = {
     ligth: {
