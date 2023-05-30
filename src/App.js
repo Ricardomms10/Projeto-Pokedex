@@ -4,7 +4,6 @@ import React from "react";
 import { AppRoutes } from "./contain/routes";
 import { BackgroundProvider } from "./context/themeContext";
 
-
 export const App = () => {
 
   return (
@@ -12,7 +11,6 @@ export const App = () => {
       <GlobalStyles />
       <AppRoutes />
     </BackgroundProvider>
-
   );
 }
 

@@ -9,7 +9,8 @@ import {
 import { Button } from "../button/button"
 
 
-import { DivError, TextError } from "./style";
+import { Close, DivError, Gif, TextError } from "./style";
+import { Main } from "../main/style";
 
 export const PokemonList = () => {
   const paginationLimit = 10;
@@ -40,7 +41,6 @@ export const PokemonList = () => {
       }
     };
 
-
     fetchPokemons();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [paginationOffset]);
@@ -50,12 +50,12 @@ export const PokemonList = () => {
       if (paginationOffset > 0) {
         setPaginationOffset(0);
       } else {
-        
+
         return;
       }
     } else {
       setNotFound(false);
-  
+
       const result = await SearchPokemon(pokemon);
       if (!result) {
         setNotFound(true);
@@ -64,8 +64,6 @@ export const PokemonList = () => {
       }
     }
   };
-  
-
 
   return (
     <>
@@ -73,21 +71,23 @@ export const PokemonList = () => {
       {notFound ? (
 
         <DivError >
-          <img alt="gif pokemon"
+          <Gif alt="gif pokemon"
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/122.gif" />
           <TextError>
             Ih! Esse Não Tem!
           </TextError>
-          <img alt="gifPokemon "
+          <Gif alt="gifPokemon "
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/143.gif" />
+          
+          <Close href="/" > X </Close>
         </DivError>
 
       ) : (
 
-        <>
+        <Main>
           <Pokedex pokemons={pokemons} />
           <Button onClick={addPokemons} />
-        </>
+        </Main>
 
       )}
 

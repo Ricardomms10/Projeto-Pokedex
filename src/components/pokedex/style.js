@@ -5,7 +5,7 @@ export const PokedexGrid = styled.ul`
   justify-content: center;
   flex-wrap: wrap;
   gap: 7px;
-  heigth:100%;
+  heigth:100vh;
   ${({ children }) => children.length === 1 && `
     height: 100vh;
   `}

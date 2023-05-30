@@ -17,7 +17,6 @@ import rock from "../../src/components/image/rock.png"
 import steel from "../../src/components/image/steel.png"
 import water from "../../src/components/image/water.png"
 
-
 export const images = {
     bug,
     dark,

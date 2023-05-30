@@ -8,7 +8,6 @@ import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 export const ButtonToggler = () => {
 
   const { theme, toggleTheme } = useContext(ThemeContext)
-
   return (
     <div>
       <ButtonHeader onClick={toggleTheme} checked={theme === themes.ligth}>

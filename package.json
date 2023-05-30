@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-pokedex": "git clone https://github.com/Ricardomms10/Projeto-Pokedex && cd Projeto-Pokedex && npm install && npm start"
   },
   "eslintConfig": {
     "extends": [

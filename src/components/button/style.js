@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-
+//Botão de mudar o Tema 
 export const ButtonHeader = styled.button`
    color:white;
    font-family:Helvetica, sans-serif;
@@ -47,8 +47,7 @@ export const ButtonHeader = styled.button`
  }
 `
 
-//Button (Mais Pokemons)
-
+//Botão (Mais Pokemons)
 export const ContainerButton = styled.div`
   margin: 6px 5px 10px 5px;
   padding: 5px;
@@ -57,10 +56,11 @@ export const ContainerButton = styled.div`
 export const BtnMaisPokemon = styled.button`
     display: block;
     width: 100%;
+    padding:5px;
     webkit-transition-duration: 0.2s; 
     transition-duration: 0.4s;
     cursor: pointer;
-    border: solid 5px #0e62b0;
+    border: solid 3px #0e62b0;
     border-radius: 5px ;
     height: 40px;
     font-family: 'Josefin Sans', sans-serif;

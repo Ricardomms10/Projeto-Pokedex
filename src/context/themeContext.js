@@ -24,7 +24,6 @@ export const BackgroundProvider = ( props ) => {
         setTheme((curr) => curr === themes.ligth ? themes.dark : themes.ligth)
     }
 
-
     return (
         <ThemeContext.Provider value={{theme, toggleTheme}}>
             {props.children}

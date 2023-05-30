@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { getPokemonData } from "../searchPokemon/searchPokemon";
-import { CardImage, BtnX, CardContainer, BtnTypes, ContainerBtn, SelectBtn,  ListDetalis, Detalis, Icons, ContainerIcons } from "../detailsPokemons/style";
+import { CardImage, BtnX, CardContainer, BtnTypes, ContainerBtn, SelectBtn, ListDetalis, Detalis, Icons, ContainerIcons } from "../detailsPokemons/style";
 import { typeIcons } from "../../theme/typesImagens";
 
 
@@ -96,10 +96,10 @@ export const PokemonDetails = () => {
                             {
                                 pokemon.types.length === 2 ?
                                     <>
-                                        <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[0]]} title= {`Pokemon Tipo ${pokemon.types[0]}`} />
-                                        <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[1]]} title= {`Pokemon Tipo ${pokemon.types[1]}`}/>
+                                        <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[0]]} title={`Pokemon Tipo ${pokemon.types[0]}`} />
+                                        <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[1]]} title={`Pokemon Tipo ${pokemon.types[1]}`} />
                                     </>
-                                    : <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[0]]} title= {`Pokemon Tipo ${pokemon.types[0]}`}/>
+                                    : <Icons alt={pokemon.types[0]} src={typeIcons[pokemon.types[0]]} title={`Pokemon Tipo ${pokemon.types[0]}`} />
                             }
                         </ContainerIcons>
 
@@ -117,7 +117,6 @@ export const PokemonDetails = () => {
                                 Habilidades
                             </BtnTypes>
                         </ContainerBtn>
-
 
                         <ListDetalis pokemon={pokemon}>
                             {
@@ -141,14 +140,8 @@ export const PokemonDetails = () => {
                                     : <SelectBtn> Selecione um botão acima </SelectBtn>
                             }
                         </ListDetalis>
-
                     </> : " "
-
-
             }
-
         </CardContainer>
     )
-
-
 }
